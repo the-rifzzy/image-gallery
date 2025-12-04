@@ -18,9 +18,3 @@ It allows users to view images with navigation and smooth transitions.
 ## How to Run
 1. Download or clone the repository  
 2. Open `index.html` in your browser  
-
-## Folder Structure
-image-gallery
-├── index.html
-├── style.css
-└── script.js
