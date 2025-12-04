@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* MASONRY LAYOUT */
+.masonry {
+    column-count: 4;
+    column-gap: 15px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.masonry img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.masonry img:hover {
+    transform: scale(1.03);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .masonry {
+        column-count: 3;
+    }
+}
+@media (max-width: 600px) {
+    .masonry {
+        column-count: 2;
+    }
+}
+@media (max-width: 400px) {
+    .masonry {
+        column-count: 1;
+    }
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.92);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 50;
+}
+
+.lightbox-img {
+    max-width: 85%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    animation: fade 0.3s;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+
+.controls {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.prev, .next {
+    font-size: 55px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
